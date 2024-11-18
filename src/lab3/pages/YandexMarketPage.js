@@ -16,10 +16,10 @@ class YandexMarketPage extends BasePage {
   }
 
   async hoverOnAllForGaming() {
-    await this.driver.sleep(2000);
-    const allForGaming = await this.findPageElement(By.xpath("//li//a[@href='/catalog--geiming/41813350']"));
+    await this.driver.sleep(2000); 
+    const allForGaming = await this.findPageElement(By.xpath("//li//a[contains(text(), 'Все для гейминга')]"));
     return await this.driver.actions().move({ origin: allForGaming }).perform();
-  }
+}
 
   async selectXboxGamingConsoles() {
     await this.driver.sleep(2000);
